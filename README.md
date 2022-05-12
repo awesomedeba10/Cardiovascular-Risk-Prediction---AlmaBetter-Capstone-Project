@@ -30,7 +30,7 @@
 * Feature Selection
 * Pipeline (Common) - Data Normalization : StandardScaler
 * Pipeline 1 - Model Training on Imbalanced Dataset by default : LogisticRegression, LinearSVC, DecisionTreeClassifier, RandomForestClassifier, KNeighborClassifier, BernoulliNB
-* * Pipeline 2 - Model Training on Oversampled Dataset using SMOTE : LogisticRegression, LinearSVC, DecisionTreeClassifier, RandomForestClassifier, KNeighborClassifier, BernoulliNB
+* Pipeline 2 - Model Training on Oversampled Dataset using SMOTE : LogisticRegression, LinearSVC, DecisionTreeClassifier, RandomForestClassifier, KNeighborClassifier, BernoulliNB
 * Classification
 * Prediction
    
