@@ -1,6 +1,6 @@
 APP_ENV = 'Development'
 APP_HOST = '127.0.0.1'
-APP_PORT = 5000
+APP_PORT = 8000
 APP_DEBUG = True
 
 # Define the application directory
