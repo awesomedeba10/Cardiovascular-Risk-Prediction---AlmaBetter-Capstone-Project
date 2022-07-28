@@ -1,0 +1,149 @@
+{% extends "_layouts/master.html" %} {% block content %}
+
+<main id="main">
+
+    <section id="contact" class="contact">
+        <div class="container" data-aos="fade-up">
+            <header class="section-header">
+                <p>Heart Attack Risk Calculator</p>
+            </header>
+            <div class="row gy-4">
+                <div class="col-lg-8">
+                    <h4 class="px-4">Get your free heart checkup and live risk free</h4>
+                    <form action="{{ url_for('home.prediction_result') }}" method="POST" class="prediction-form">
+                        <div class="row gy-4">
+
+                            <div class="col-md-6">
+                                <label for="gender">Your Gender</label>
+                                <select class="form-control" name="" id="">
+                                    <option value="">Select your Gender</option>
+                                    <option value="">Male</option>
+                                    <option value="">Female</option>
+                                    <option value="">Prefer not to disclose</option>
+                                </select>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label for="age" class="required">Current Age</label>
+                                <input type="text" class="form-control" name="age" placeholder="Your Age"
+                                    oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*)\./g, '$1');"
+                                    required>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label for="gender">Do you smoke?</label>
+                                <select class="form-control" id="is_smoker">
+                                    <option value="">Do you smoke?</option>
+                                    <option value="0" selected>No</option>
+                                    <option value="1">Yes</option>
+                                </select>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label for="age">No. of ciggerates per day</label>
+                                <input type="text" class="form-control" id="cigsPerDay" name="cigsPerDay"
+                                    placeholder="No. of ciggerates per day"
+                                    oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"
+                                    value="0">
+                            </div>
+
+                            <div class="col-md-6">
+                                <label for="sys_bp" class="required">Systolic Blood Pressure</label>
+                                <input type="text" class="form-control" name="sys_bp"
+                                    placeholder="Your systolic blood pressure"
+                                    oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"
+                                    required>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label for="dia_bp" class="required">Diastolic Blood Pressure</label>
+                                <input type="text" class="form-control" name="dia_bp"
+                                    placeholder="Your diastolic blood pressure"
+                                    oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"
+                                    required>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label for="tot_chol" class="required">Current Cholesterol Level</label>
+                                <input type="text" class="form-control" name="tot_chol"
+                                    placeholder="Your cholesterol level"
+                                    oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"
+                                    required>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label for="glucose" class="required">Current Glucose Level</label>
+                                <input type="text" class="form-control" name="glucose" placeholder="Your glucose level"
+                                    oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"
+                                    required>
+                            </div>
+
+                            <div class="col-md-12 text-center">
+                                <div class="sent-message">Your message has been sent. Thank you!</div>
+
+                                <button type="submit">Calculate</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-lg-4">
+                    <div class="row gy-4 counts">
+                        <div class="col-lg-12 col-md-12">
+                            <div class="prediction-result-div count-box">
+                                <img src="{{ url_for('static', filename='assets/images/banner/prediction-label.jpg') }}" class="img-fluid mx-auto" alt="">
+                                <header class="section-header"><h2 style="font-size: 16px">View your Result Here</h2></header>
+                                <!-- <i class="bi bi-emoji-smile"></i>
+                                <div class="prediction">
+                                    <span>232</span>
+                                    <p>Happy Clients</p>
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+</main>
+{% endblock %}
+
+{% block scripts %}
+<script>
+    $(document).on('change', '#is_smoker', function () {
+        if ($(this).val() == 1) {
+            $('#cigsPerDay').attr('required', true)
+                .val('');
+            $('#cigsPerDay').closest('div').find('label').addClass('required');
+        } else {
+            $('#cigsPerDay').attr('required', false)
+                .val('0');
+            $('#cigsPerDay').closest('div').find('label').removeClass('required');
+        }
+    });
+
+    $(".prediction-form").submit(function (e) {
+        e.preventDefault();
+
+        var form = $(this);
+        var actionUrl = form.attr('action');
+
+        $.ajax({
+            url: actionUrl,
+            method: "POST",
+            dataType: "json",
+            data: form.serialize(),
+            beforeSend: function () {
+                $('.prediction-result-div').html('<div class="loading">Calculating...</div>');
+            },
+            success: function (data) {
+                alert(data); // show response from the php script.
+            }
+        });
+
+    });
+</script>
+{% endblock %}
