@@ -44,7 +44,7 @@
                                 <input type="text" class="form-control" id="cigsPerDay" name="cigsPerDay"
                                     placeholder="No. of ciggerates per day"
                                     oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"
-                                    value="0">
+                                    value="0" readonly>
                             </div>
 
                             <div class="col-md-6">
@@ -78,9 +78,18 @@
                                     required>
                             </div>
 
-                            <div class="col-md-12 text-center">
-                                <div class="sent-message">Your message has been sent. Thank you!</div>
+                            <div class="col-md-6">
+                                <label for="gender">Select Model <small style="color: #adaaaa">(Default set to predict best Result)</small></label>
+                                <select class="form-control" name="model">
+                                    <option value="">Choose any model from list</option>
+                                    {% for key, model in models.items() %}
+                                    <option value="{{ key }}" {% if key == '0' %} selected {% endif %}>{{ model['name'] }}</option>
+                                    {% endfor %}
+                                </select>
+                            </div>
 
+
+                            <div class="col-md-6 text-right mt-5">
                                 <button type="submit">Calculate</button>
                             </div>
                         </div>
@@ -92,11 +101,6 @@
                             <div class="prediction-result-div count-box">
                                 <img src="{{ url_for('static', filename='assets/images/banner/prediction-label.jpg') }}" class="img-fluid mx-auto" alt="">
                                 <header class="section-header"><h2 style="font-size: 16px">View your Result Here</h2></header>
-                                <!-- <i class="bi bi-emoji-smile"></i>
-                                <div class="prediction">
-                                    <span>232</span>
-                                    <p>Happy Clients</p>
-                                </div> -->
                             </div>
                         </div>
                     </div>
@@ -116,11 +120,11 @@
     $(document).on('change', '#is_smoker', function () {
         if ($(this).val() == 1) {
             $('#cigsPerDay').attr('required', true)
-                .val('');
+                .val('').prop('readonly', false);
             $('#cigsPerDay').closest('div').find('label').addClass('required');
         } else {
             $('#cigsPerDay').attr('required', false)
-                .val('0');
+                .val('0').prop('readonly', true);
             $('#cigsPerDay').closest('div').find('label').removeClass('required');
         }
     });
@@ -138,9 +142,19 @@
             data: form.serialize(),
             beforeSend: function () {
                 $('.prediction-result-div').html('<div class="loading">Calculating...</div>');
+                $('.prediction-form').find('button[type="submit"]').prop('disabled', true);
+            },
+            complete: function () {
+                $('.prediction-form').find('button[type="submit"]').prop('disabled', false);
             },
             success: function (data) {
-                alert(data); // show response from the php script.
+                let emoji = data.prediction == '0' ? 'smile' : 'frown'
+                let color = data.prediction == '0' ? '#00c853' : '#d50000'
+                $('.prediction-result-div').html(`<i class="bi bi-emoji-${emoji}" style="color: ${color}"></i>
+                                <div class="prediction">
+                                    <span>${data.target_label}</span>
+                                    <p>${data.probability}</p>
+                                </div>`);
             }
         });
 
