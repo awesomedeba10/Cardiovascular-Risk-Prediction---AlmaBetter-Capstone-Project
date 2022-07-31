@@ -12,6 +12,28 @@
   scroll-behavior: smooth;
 }
 
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #4154f1 #ffffff;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 10px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #4154f1;
+  border-radius: 20px;
+  border: 3px none #ffffff;
+}
+
 body {
   font-family: "Open Sans", sans-serif;
   color: #444444;
@@ -34,6 +56,14 @@ h4,
 h5,
 h6 {
   font-family: "Nunito", sans-serif;
+}
+
+.pointer {
+  cursor: pointer !important;
+}
+
+.text-justify {
+  text-align: justify !important;
 }
 
 /*--------------------------------------------------------------
@@ -158,12 +188,64 @@ section {
   opacity: 1;
 }
 
+.btn-down {
+  position: relative;
+  color: #4154f1;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 3rem;
+  text-shadow: #D1C4E9 1px 0 10px;
+  height: 5rem;
+  width: 5rem;
+  border: solid 1px #4154f1;
+  border-radius: 175px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  bottom: 1em;
+}
+
+.btn-down:before {
+  content: '';
+  position: absolute;
+  background: #6776f4;
+  width: 0;
+  height: 0;
+  z-index: -1;
+  border-radius: 175px;
+  box-shadow: 0px 0px 24px 1px rgba(224, 199, 224, 0.2);
+  transition: all 500ms cubic-bezier(1.000, -0.195, 0.000, 1.330);
+  transition-timing-function: cubic-bezier(1.000, -0.195, 0.000, 1.330);
+}
+
+.btn-down:hover {
+  color: #dde0f6;
+}
+
+.btn-down:hover:before {
+  width: 85%;
+  height: 85%;
+}
+
+.btn-down:active:before,
+.btn-down:focus:before {
+  width: 100%;
+  height: 100%;
+}
+
 /*--------------------------------------------------------------
 # Disable aos animation delay on mobile devices
 --------------------------------------------------------------*/
 @media screen and (max-width: 768px) {
   [data-aos-delay] {
     transition-delay: 0 !important;
+  }
+
+  .btn-down {
+    bottom: -1em;
   }
 }
 
@@ -595,11 +677,13 @@ section {
 # Values
 --------------------------------------------------------------*/
 .values .box {
-  padding: 30px;
+  padding: 10px;
   box-shadow: 0px 0 5px rgba(1, 41, 112, 0.08);
   text-align: center;
   transition: 0.3s;
   height: 100%;
+  max-height: 20.5rem;
+  overflow: auto;
 }
 
 .values .box img {
@@ -661,6 +745,67 @@ section {
 }
 
 /*--------------------------------------------------------------
+# Counts
+--------------------------------------------------------------*/
+
+.eda-grid .container a {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+  overflow: hidden;
+}
+
+.eda-grid .container a::after {
+  content: "";
+  background: linear-gradient(transparent, black);
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  transform: translateY(100%);
+  transition-duration: .75s;
+}
+
+.eda-grid .container a:hover::after {
+  transform: translateY(50%);
+}
+
+.eda-grid .container a * {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition-duration: 1s;
+}
+
+.eda-grid .container a:hover img {
+  transform: scale(1.05);
+}
+
+.eda-grid .container {
+  display: grid;
+  grid-gap: 15px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-auto-rows: 240px;
+  grid-template-columns: 3fr 2fr 3fr;
+}
+
+.eda-grid .horizontal {
+  grid-column: span 2;
+}
+
+.eda-grid .vertical {
+  grid-row: span 2;
+}
+
+.eda-grid .big {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+/*--------------------------------------------------------------
 # Features
 --------------------------------------------------------------*/
 .features .feature-box {
@@ -693,7 +838,7 @@ section {
 }
 
 .features .feture-tabs {
-  margin-top: 120px;
+  margin-top: 3rem;
 }
 
 .features .feture-tabs h3 {
@@ -701,6 +846,94 @@ section {
   font-weight: 700;
   font-size: 32px;
   margin-bottom: 10px;
+}
+
+.features .feture-tabs h3 {
+  color: #012970;
+  font-weight: 700;
+  font-size: 22px;
+  margin-bottom: 8px;
+}
+
+.features .features-list {
+  counter-reset: li;
+  padding-left: 2.5rem;
+  padding: .25rem 0 .25rem 2.75rem;
+}
+
+.features .features-list small {
+  color: #4154f1;
+  letter-spacing: 1px;
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.features .features-list ol,
+.features .features-list ul {
+  padding: .75rem 0 0 1.5rem;
+}
+
+.features .features-list li {
+  margin-bottom: .375rem;
+}
+
+.features .features-list li {
+  position: relative;
+  counter-increment: li;
+  min-height: 2rem;
+  padding-top: .5rem;
+  list-style: none;
+}
+
+.features .features-list li::before,
+.features .features-list li::after {
+  position: absolute;
+  display: flex;
+  opacity: 0.35;
+}
+
+.features .features-list li::before {
+  content: counter(li);
+  left: -2.75rem;
+  top: 0;
+  height: calc(2rem - 1px);
+  width: calc(2rem - 1px);
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 1px solid currentcolor;
+}
+
+.features .features-list li::after {
+  content: '';
+  left: -1.75rem;
+  top: calc(2rem + 1px);
+  height: calc(100% - 2.5rem);
+  border-left: 1px solid currentcolor;
+}
+
+.features .features-list.no-counter li {
+  padding-top: 1rem;
+}
+
+.features .features-list.no-counter li::before {
+  content: "\F128";
+  font-family: "bootstrap-icons";
+  top: 1rem;
+}
+
+.features .features-list.no-counter li::after {
+  top: calc(3rem + 1px);
+  left: -1.77rem;
+  height: calc(100% - 1.7rem);
+}
+
+.features .features-list.no-counter li:last-child:before {
+  content: '\F269';
+}
+
+.features .features-list.no-counter li:last-child:after {
+  border-left: none;
 }
 
 @media (max-width: 768px) {
@@ -745,7 +978,7 @@ section {
 }
 
 .features .feature-icons {
-  margin-top: 120px;
+  margin-top: 2rem;
 }
 
 .features .feature-icons h3 {
@@ -764,26 +997,51 @@ section {
 
 .features .feature-icons .content .icon-box {
   display: flex;
+  min-height: 11rem;
 }
 
-.features .feature-icons .content .icon-box h4 {
+.features .feature-icons .content .icon-box-block {
+  display: block;
+  min-height: 8rem;
+}
+
+.features .feature-icons .content .icon-box h4, .features .feature-icons .content .icon-box-block h4 {
   font-size: 20px;
   font-weight: 700;
   margin: 0 0 10px 0;
-  color: #012970;
+  color: #012970 !important;
 }
 
-.features .feature-icons .content .icon-box i {
+.features .feature-icons .content .icon-box i, .features .feature-icons .content .icon-box-block i {
   font-size: 44px;
   line-height: 44px;
   color: #0245bc;
   margin-right: 15px;
 }
 
-.features .feature-icons .content .icon-box p {
+.features .feature-icons .content .icon-box a, .features .feature-icons .content .icon-box-block a {
+  color: #012970;
+}
+
+.features .feature-icons .content .icon-box p, .features .feature-icons .content .icon-box-block p {
   font-size: 15px;
   color: #848484;
 }
+
+.features .feature-icons .content .icon-box a.has-link::after {
+  content: "\F470";
+  font-family: "bootstrap-icons";
+  position: fixed;
+}
+
+.pipeline {
+  padding: 45px 0;
+}
+
+.pipeline .section-header {
+  padding-bottom: 15px;
+}
+
 
 /*--------------------------------------------------------------
 # Services
@@ -938,6 +1196,16 @@ section {
 
 .services .service-box:hover .icon {
   background: #fff;
+}
+
+table.dataTable thead>tr>th.sorting {
+  background: #4154f1e0;
+  color: #fff;
+}
+
+.dataTables_wrapper .active>.page-link, .page-link.active {
+  background-color: #4154f1e0;
+  border-color: #4154f1e0;
 }
 
 /*--------------------------------------------------------------
@@ -1524,6 +1792,8 @@ section {
   background-color: #4154f1;
 }
 
+
+
 /*--------------------------------------------------------------
 # Recent Blog Posts
 --------------------------------------------------------------*/
@@ -1670,7 +1940,7 @@ section {
 }
 
 .contact .prediction-form label.required:after {
-  content:" *";
+  content: " *";
   color: red;
 }
 
@@ -1706,6 +1976,12 @@ section {
 
 .contact .prediction-form button[type=submit]:hover {
   background: #5969f3;
+}
+
+.contact .preview-icon {
+  font-size: 30px !important;
+  position: relative;
+  top: 5px;
 }
 
 @-webkit-keyframes animate-loading {

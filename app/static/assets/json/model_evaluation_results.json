@@ -1,0 +1,25 @@
+{
+    "columns": [
+        { "data" : "DT_RowId", "title" : "Rank" },
+        { "data" : "model", "title" : "Model" },
+        { "data" : "sample", "title" : "Sampling Strategy"},
+        { "data" : "accuracy", "title" : "Accuracy"},
+        { "data" : "precision", "title" : "Precision"},
+        { "data" : "recall", "title" : "Recall"},
+        { "data" : "f1_score", "title" : "F1 Score"}
+    ],
+    "data": [
+        { "DT_RowId" : "1", "model" : "Random Forest", "sample" : "SMOTE", "accuracy": "0.869128", "precision": "0.863862", "recall": "0.866990", "f1_score": "0.865284"},
+        { "DT_RowId" : "2", "model" : "K-Nearest Neighbors", "sample" : "SMOTE", "accuracy": "0.837808", "precision": "0.840005", "recall": "0.851372", "f1_score": "0.836778"},
+        { "DT_RowId" : "3", "model" : "Decision Tree", "sample" : "SMOTE", "accuracy": "0.763982", "precision": "0.755975", "recall": "0.755759", "f1_score": "0.755866"},
+        { "DT_RowId" : "4", "model" : "Logistic Regression", "sample" : "SMOTE", "accuracy": "0.675615", "precision": "0.673127", "recall": "0.678853", "f1_score": "0.671989"},
+        { "DT_RowId" : "5", "model" : "Linear SVC", "sample" : "SMOTE", "accuracy": "0.667785", "precision": "0.655994", "recall": "0.655039", "f1_score": "0.655473"},
+        { "DT_RowId" : "6", "model" : "Bernoulli NB", "sample" : "SMOTE", "accuracy": "0.668904", "precision": "0.656092", "recall": "0.651795", "f1_score": "0.653241"},
+        { "DT_RowId" : "7", "model" : "Random Forest", "sample" : "Default", "accuracy": "0.851536", "precision": "0.708236", "recall": "0.548131", "f1_score": "0.552613"},
+        { "DT_RowId" : "8", "model" : "Decision Tree", "sample" : "Default", "accuracy": "0.844710", "precision": "0.641733", "recall": "0.525660", "f1_score": "0.515689"},
+        { "DT_RowId" : "9", "model" : "Logistic Regression", "sample" : "Default", "accuracy": "0.849829", "precision": "0.704987", "recall": "0.524066", "f1_score": "0.510052"},
+        { "DT_RowId" : "10", "model" : "Bernoulli NB", "sample" : "Default", "accuracy": "0.848123", "precision": "0.675862", "recall": "0.513836", "f1_score": "0.490260"},
+        { "DT_RowId" : "11", "model" : "linear SVC", "sample" : "Default", "accuracy": "0.848123", "precision": "0.675258", "recall": "0.509224", "f1_score": "0.480263"},
+        { "DT_RowId" : "12", "model" : "K-Nearest Neighbors", "sample" : "Default", "accuracy": "0.839590", "precision": "0.495435", "recall": "0.499582", "f1_score": "0.466736"}
+    ]
+}

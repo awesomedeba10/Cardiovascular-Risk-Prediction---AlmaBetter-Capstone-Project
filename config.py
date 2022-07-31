@@ -9,6 +9,7 @@ APP_DEBUG = True
 BASE_DIR = os.path.abspath(os.path.dirname(__file__))
 MODEL_DIR = os.path.join(BASE_DIR, 'models')
 DATA_DIR = os.path.join(BASE_DIR, 'data')
+ASSET_DIR = os.path.join(BASE_DIR, 'app', 'static')
 
 # Application threads. A common general assumption is
 # using 2 per available processor cores - to handle
