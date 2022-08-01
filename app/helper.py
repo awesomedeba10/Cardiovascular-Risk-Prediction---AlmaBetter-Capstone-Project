@@ -10,5 +10,5 @@ def route(name, **query):
 def get_charts(dir, relative_path):
     # onlyfiles = [{url_for('static', filename='assets/images/charts/'+ f): Image.open(os.path.join(dir, f)).size} for f in os.listdir(dir) 
     #     if f.endswith(".webp")]
-    files_list = [url_for('static', filename= relative_path + f) for f in os.listdir(dir) if f.endswith(".webp")]
+    files_list = [url_for('static', filename= relative_path + f) for f in os.listdir(dir) if f.startswith("eda_")]
     return files_list

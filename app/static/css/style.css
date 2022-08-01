@@ -528,7 +528,7 @@ section {
 .hero {
   width: 100%;
   height: 100vh;
-  background: url(../img/hero-bg.png) top center no-repeat;
+  /* background: url(../img/hero-bg.png) top center no-repeat; */
   background-size: cover;
 }
 
@@ -787,9 +787,6 @@ section {
 .eda-grid .container {
   display: grid;
   grid-gap: 15px;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  grid-auto-rows: 240px;
-  grid-template-columns: 3fr 2fr 3fr;
 }
 
 .eda-grid .horizontal {
@@ -803,6 +800,13 @@ section {
 .eda-grid .big {
   grid-column: span 2;
   grid-row: span 2;
+}
+
+@media screen and (min-width: 768px) {
+  .eda-grid .container {
+    grid-auto-rows: 240px;
+    grid-template-columns: 3fr 2fr 3fr;
+  }
 }
 
 /*--------------------------------------------------------------
@@ -844,15 +848,13 @@ section {
 .features .feture-tabs h3 {
   color: #012970;
   font-weight: 700;
-  font-size: 32px;
-  margin-bottom: 10px;
-}
-
-.features .feture-tabs h3 {
-  color: #012970;
-  font-weight: 700;
   font-size: 22px;
   margin-bottom: 8px;
+}
+
+.features .feture-tabs h3 i {
+  position: relative;
+  top: 3px;
 }
 
 .features .features-list {
@@ -1005,25 +1007,29 @@ section {
   min-height: 8rem;
 }
 
-.features .feature-icons .content .icon-box h4, .features .feature-icons .content .icon-box-block h4 {
+.features .feature-icons .content .icon-box h4,
+.features .feature-icons .content .icon-box-block h4 {
   font-size: 20px;
   font-weight: 700;
   margin: 0 0 10px 0;
   color: #012970 !important;
 }
 
-.features .feature-icons .content .icon-box i, .features .feature-icons .content .icon-box-block i {
+.features .feature-icons .content .icon-box i,
+.features .feature-icons .content .icon-box-block i {
   font-size: 44px;
   line-height: 44px;
   color: #0245bc;
   margin-right: 15px;
 }
 
-.features .feature-icons .content .icon-box a, .features .feature-icons .content .icon-box-block a {
+.features .feature-icons .content .icon-box a,
+.features .feature-icons .content .icon-box-block a {
   color: #012970;
 }
 
-.features .feature-icons .content .icon-box p, .features .feature-icons .content .icon-box-block p {
+.features .feature-icons .content .icon-box p,
+.features .feature-icons .content .icon-box-block p {
   font-size: 15px;
   color: #848484;
 }
@@ -1203,7 +1209,8 @@ table.dataTable thead>tr>th.sorting {
   color: #fff;
 }
 
-.dataTables_wrapper .active>.page-link, .page-link.active {
+.dataTables_wrapper .active>.page-link,
+.page-link.active {
   background-color: #4154f1e0;
   border-color: #4154f1e0;
 }
@@ -1733,15 +1740,15 @@ table.dataTable thead>tr>th.sorting {
 
 .team .member .member-info h4 {
   font-weight: 700;
-  margin-bottom: 5px;
-  font-size: 20px;
+  margin-bottom: 10px;
+  font-size: 3em;
   color: #012970;
 }
 
 .team .member .member-info span {
   display: block;
-  font-size: 14px;
-  font-weight: 400;
+  font-size: 22px;
+  font-weight: 600;
   color: #aaaaaa;
 }
 
@@ -2572,7 +2579,7 @@ table.dataTable thead>tr>th.sorting {
 }
 
 .footer .footer-top {
-  background: white url(../img/footer-bg.png) no-repeat right top;
+  background: white no-repeat right top;
   background-size: contain;
   border-top: 1px solid #e1ecff;
   border-bottom: 1px solid #e1ecff;

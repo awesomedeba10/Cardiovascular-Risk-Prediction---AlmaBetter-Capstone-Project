@@ -56,8 +56,8 @@
                     <li><a class="nav-link scrollto active" href="{{ url_for('home.index') }}#home">Home</a></li>
                     <li><a class="nav-link scrollto" href="{{ url_for('home.index') }}#intro">Introduction</a></li>
                     <li><a class="nav-link scrollto" href="{{ url_for('home.index') }}#approaches">Approaches</a></li>
-                    <li><a class="nav-link scrollto" href="#business">Business Use Cases</a></li>
-                    <li><a class="nav-link scrollto" href="#links">Deliverables</a></li>
+                    <li><a class="nav-link scrollto" href="{{ url_for('home.index') }}#business">Business Use Cases</a></li>
+                    <li><a class="nav-link scrollto" href="{{ url_for('home.index') }}#links">Deliverables</a></li>
                     <li><a class="getstarted scrollto" href="{{ url_for('home.prediction') }}">Calculate Risk</a></li>
                 </ul>
                 <i class="bi bi-list mobile-nav-toggle"></i>
@@ -72,72 +72,44 @@
     <!-- ======= Footer ======= -->
     <footer id="footer" class="footer">
 
-        <div class="footer-newsletter">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-lg-12 text-center">
-                        <h4>Our Newsletter</h4>
-                        <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
-                    </div>
-                    <div class="col-lg-6">
-                        <form action="" method="post">
-                            <input type="email" name="email"><input type="submit" value="Subscribe">
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-
         <div class="footer-top">
             <div class="container">
                 <div class="row gy-4">
                     <div class="col-lg-5 col-md-12 footer-info">
-                        <a href="index.html" class="logo d-flex align-items-center">
-                            <img src="assets/img/logo.png" alt="">
-                            <span>FlexStart</span>
+                        <a href="javascript:void(0)" class="logo d-flex align-items-center">
+                            <span>Debanjan Ganguly</span>
                         </a>
-                        <p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita
-                            valies darta donna mare fermentum iaculis eu non diam phasellus.</p>
+                        <p>Innovative & Analytically minded who enjoys connecting the dots.</p>
                         <div class="social-links mt-3">
-                            <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
-                            <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-                            <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-                            <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+                            <a href="https://github.com/awesomedeba10" class="twitter" target="_blank"><i class="bi bi-github"></i></a>
+                            <a href="https://www.linkedin.com/in/awesomedeba10/" class="linkedin" target="_blank"><i class="bi bi-linkedin"></i></a>
+                            <a href="https://medium.com/@officialdeba10" class="instagram" target="_blank"><i class="bi bi-medium"></i></a>
+                            <a href="https://stackoverflow.com/users/8551281/iamawesome" class="facebook" target="_blank"><i class="bi bi-stack-overflow"></i></a>
                         </div>
                     </div>
 
                     <div class="col-lg-2 col-6 footer-links">
-                        <h4>Useful Links</h4>
-                        <ul>
-                            <li><i class="bi bi-chevron-right"></i> <a href="#">Home</a></li>
-                            <li><i class="bi bi-chevron-right"></i> <a href="#">About us</a></li>
-                            <li><i class="bi bi-chevron-right"></i> <a href="#">Services</a></li>
-                            <li><i class="bi bi-chevron-right"></i> <a href="#">Terms of service</a></li>
-                            <li><i class="bi bi-chevron-right"></i> <a href="#">Privacy policy</a></li>
-                        </ul>
+                        
                     </div>
 
                     <div class="col-lg-2 col-6 footer-links">
-                        <h4>Our Services</h4>
+                        <h4>Site Links</h4>
                         <ul>
-                            <li><i class="bi bi-chevron-right"></i> <a href="#">Web Design</a></li>
-                            <li><i class="bi bi-chevron-right"></i> <a href="#">Web Development</a></li>
-                            <li><i class="bi bi-chevron-right"></i> <a href="#">Product Management</a></li>
-                            <li><i class="bi bi-chevron-right"></i> <a href="#">Marketing</a></li>
-                            <li><i class="bi bi-chevron-right"></i> <a href="#">Graphic Design</a></li>
+                            <li><i class="bi bi-chevron-right"></i> <a href="{{ url_for('home.index') }}#home">Home</a></li>
+                            <li><i class="bi bi-chevron-right"></i> <a href="{{ url_for('home.index') }}#intro">Introduction</a></li>
+                            <li><i class="bi bi-chevron-right"></i> <a href="{{ url_for('home.index') }}#approaches">Approaches</a></li>
+                            <li><i class="bi bi-chevron-right"></i> <a href="{{ url_for('home.index') }}#business">Business Use Cases</a></li>
+                            <li><i class="bi bi-chevron-right"></i> <a href="{{ url_for('home.index') }}#links">Deliverables</a></li>
+                            <li><i class="bi bi-chevron-right"></i> <a href="{{ url_for('home.prediction') }}">Calculate Risk</a></li>
                         </ul>
                     </div>
 
                     <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
-                        <h4>Contact Us</h4>
+                        <h4>Contact</h4>
                         <p>
-                            A108 Adam Street <br>
-                            New York, NY 535022<br>
-                            United States <br><br>
-                            <strong>Phone:</strong> +1 5589 55488 55<br>
-                            <strong>Email:</strong> info@example.com<br>
+                            <strong>Phone:</strong> <a href="tel:+917098908674">+91 70989 08674</a><br>
+                            <strong>Email:</strong> <a href="mailto:officialdeba10@gmail.com">officialdeba10@gmail.com</a><br>
                         </p>
-
                     </div>
 
                 </div>
@@ -148,6 +120,9 @@
             <div class="copyright">
                 a Solo Project by <strong><span><a href="https://github.com/awesomedeba10" target="_blank">Debanjan
                             Ganguly</a></span></strong>.
+            </div>
+            <div class="credits">
+                It is a presenatation of personal project, I neither store any of the data you entered nor any kind of caches.
             </div>
         </div>
     </footer><!-- End Footer -->
