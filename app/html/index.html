@@ -7,7 +7,7 @@
         <div class="row">
             <div class="col-lg-6 d-flex flex-column justify-content-center">
                 <h1 data-aos="fade-up">Cardiovascular Risk Prediction Analysis</h1>
-                <h2 data-aos="fade-up" data-aos-delay="400">A case study based capstone project by Debanjan Ganguly</h2>
+                <h2 data-aos="fade-up" data-aos-delay="400">A case-study-based capstone project by <br> Debanjan Ganguly</h2>
                 <div data-aos="fade-up" data-aos-delay="600">
                     <div class="text-center text-lg-start">
                         <a href="#intro"
@@ -37,17 +37,17 @@
                 <div class="col-lg-6 d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="200">
                     <div class="content">
                         <h3>PROBLEM STATEMENT</h3>
-                        <p>Heart disease is the leading cause of death worldwide, accounting for one third of deaths in
-                            2019. Heart disease cases nearly doubled over the period, from 271 million in 1990 to 523
-                            million in 2019 and the number of fatalities from heart disease increased by 50 percent,
-                            from 12 million to 18 million. The shocking fact is 3 out of 4 such deaths took place in
-                            developing countries countries.</p>
+                        <p>Heart disease is the leading cause of death worldwide, accounting for <b>one-third</b> of <b>deaths</b> in
+                            <b>2019</b>. Heart disease cases nearly doubled over the period, from 271 million in 1990 to 523
+                            million in 2019 and the number of fatalities from heart disease increased by <b>50%</b>,
+                            from 12 million to 18 million. The shocking fact is <b>3 out of 4</b> such deaths took place in
+                            <b>developing countries</b>.</p>
 
                         <p>However, early detection of cardiovascular diseases, adequate medication, and specialist
-                            consultation can lower the chance of fatality by 90%. Good data-driven approaches for
+                            consultation can lower the chance of fatality by <b>90%</b>. Good <b>data-driven</b> approaches for
                             predicting cardiac diseases have the potential to enhance the entire research and preventive
-                            process. In this project, the effort is given to determine whether the patient has 10-year
-                            risk of future coronary heart disease (CHD) or not. We have created a tool that can estimate
+                            process. In this project, the effort is given to determine whether the patient has a <b>10-year
+                            risk of future coronary heart disease (CHD)</b> or not. We have created a tool that can estimate
                             the risk of CHD depending on a person's medical history using machine learning approaches.
                         </p>
                         <div class="text-center text-lg-start">
@@ -95,7 +95,7 @@
                             </div>
                         </div>
 
-                        <div class="col-md-6" data-aos="zoom-out" data-aos-delay="300"
+                        <div class="col-md-6 pointer" data-aos="zoom-out" data-aos-delay="300"
                             onclick="window.location.href='#eda'">
                             <div class="feature-box d-flex align-items-center">
                                 <i class="bi bi-2-square"></i>
@@ -103,7 +103,7 @@
                             </div>
                         </div>
 
-                        <div class="col-md-6" data-aos="zoom-out" data-aos-delay="400"
+                        <div class="col-md-6 pointer" data-aos="zoom-out" data-aos-delay="400"
                             onclick="window.location.href='#features'">
                             <div class="feature-box d-flex align-items-center">
                                 <i class="bi bi-3-square"></i>
@@ -111,7 +111,7 @@
                             </div>
                         </div>
 
-                        <div class="col-md-6" data-aos="zoom-out" data-aos-delay="500"
+                        <div class="col-md-6 pointer" data-aos="zoom-out" data-aos-delay="500"
                             onclick="window.location.href='#pipeline'">
                             <div class="feature-box d-flex align-items-center">
                                 <i class="bi bi-4-square"></i>
@@ -119,7 +119,7 @@
                             </div>
                         </div>
 
-                        <div class="col-md-6" data-aos="zoom-out" data-aos-delay="600"
+                        <div class="col-md-6 pointer" data-aos="zoom-out" data-aos-delay="600"
                             onclick="window.location.href='#evaluation'">
                             <div class="feature-box d-flex align-items-center">
                                 <i class="bi bi-5-square"></i>
@@ -127,7 +127,7 @@
                             </div>
                         </div>
 
-                        <div class="col-md-6" data-aos="zoom-out" data-aos-delay="700"
+                        <div class="col-md-6 pointer" data-aos="zoom-out" data-aos-delay="700"
                             onclick="window.location.href='#deployment'">
                             <div class="feature-box d-flex align-items-center">
                                 <i class="bi bi-6-square"></i>
@@ -204,7 +204,7 @@
                         <h3>Dataset Info</h3>
                         <p class="text-justify">
                             The dataset is from an cardiovascular study on residents of the town of Framingham,
-                            Massachusetts; Available publicly in Kaggle.
+                            Massachusetts. It is available publicly in Kaggle.
                             <br>
                             Target variable is binary; Total Negative labeled count is <b>2483</b> and total Positive
                             labeled count is <b>444</b>.
@@ -216,11 +216,11 @@
 
                 <div class="col-lg-3 col-md-6 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="300">
                     <div class="box">
-                        <h3>Demographic Attributes info</h3>
+                        <h3>Demographic Attributes Info</h3>
                         <ul class="text-justify">
                             <li><code>sex:</code> male or female("M" or "F")</li>
-                            <li>age: Age of the patient (Continous)</li>
-                            <li>education: No further information provided</li>
+                            <li><code>age:</code> Age of the patient (Continous)</li>
+                            <li><code>education:</code> No further information provided</li>
                         </ul>
                     </div>
                 </div>
@@ -229,8 +229,8 @@
                     <div class="box">
                         <h3>Behavioral Attributes Info</h3>
                         <ul class="text-justify">
-                            <li>is_smoking: whether or not the patient is a current smoker ("YES" or "NO")</li>
-                            <li>Cigs Per Day: the number of cigarettes that the person smoked on average in one day
+                            <li><code>is_smoking:</code> whether or not the patient is a current smoker ("YES" or "NO")</li>
+                            <li><code>cigsPerDay:</code> the number of cigarettes that the person smoked on average in one day
                                 (Continous)</li>
                         </ul>
                     </div>
@@ -240,16 +240,16 @@
                     <div class="box">
                         <h3>Medical Histories Info</h3>
                         <ul class="text-justify">
-                            <li>BP Meds: whether or not the patient was on blood pressure medication (Nominal)</li>
-                            <li>Prevalent Stroke: whether or not the patient had previously had a stroke (Nominal)</li>
-                            <li>Prevalent Hyp: whether or not the patient was hypertensive (Nominal)</li>
-                            <li>Diabetes: whether or not the patient had diabetes (Nominal)</li>
-                            <li>Tot Chol: total cholesterol level (Continuous)</li>
-                            <li>Sys BP: systolic blood pressure (Continuous)</li>
-                            <li>Dia BP: diastolic blood pressure (Continuous)</li>
-                            <li>BMI: Body Mass Index (Continuous)</li>
-                            <li>Heart Rate: heart rate (Continuous)</li>
-                            <li>Glucose: glucose level (Continuous)</li>
+                            <li><code>BPMeds</code> whether or not the patient was on blood pressure medication (Nominal)</li>
+                            <li><code>prevalentStroke:</code> whether or not the patient had previously had a stroke (Nominal)</li>
+                            <li><code>prevalentHyp</code> whether or not the patient was hypertensive (Nominal)</li>
+                            <li><code>diabetes:</code> whether or not the patient had diabetes (Nominal)</li>
+                            <li><code>totChol:</code> total cholesterol level (Continuous)</li>
+                            <li><code>sysBP:</code> systolic blood pressure (Continuous)</li>
+                            <li><code>diaBP:</code> diastolic blood pressure (Continuous)</li>
+                            <li><code>BMI:</code> Body Mass Index (Continuous)</li>
+                            <li><code>heartRate:</code> heart rate (Continuous)</li>
+                            <li><code>glucose:</code> glucose level (Continuous)</li>
                         </ul>
                     </div>
                 </div>
@@ -304,7 +304,7 @@
             <!-- Feature Tabs -->
             <div class="row feture-tabs" data-aos="fade-up">
                 <div class="col-lg-6">
-                    <h3>First extracted top 8 features using 2 methods described below, then selected the
+                    <h3>First extracted <b>top 8</b> features using <b>2 feature selection methods</b> described below, then selected the
                         <code>Common Features</code>
                         from the two methods.
                     </h3>
@@ -323,13 +323,13 @@
                     <div class="tab-content">
 
                         <div class="tab-pane fade show active" id="tab1">
-                            <p>Boruta is an all-relevant wrapper feature selection method. It is an all relevant feature
+                            <p><code>BorutaPy</code> is an all-relevant wrapper feature selection method. It is an all relevant feature
                                 selection method, while most other are minimal optimal; this means it tries to find all
                                 features carrying information usable for prediction, rather than finding a possibly
                                 compact subset of features on which some classifier has a minimal error. BorutaPy
                                 package runs <code>Random Forest</code> on both original and random attributes.</p>
                             <div class="d-flex align-items-center mb-2">
-                                <h4><a href="https://jmlr.csail.mit.edu/papers/volume8/nilsson07a/nilsson07a.pdf"
+                                <h4><a href="https://mbq.github.io/Boruta/"
                                         target="_blank">
                                         <i class="bi bi-link-45deg"></i>
                                         Link to BorutaPy Papers</a></h4>
@@ -346,11 +346,11 @@
                         </div><!-- End Tab 1 Content -->
 
                         <div class="tab-pane fade show" id="tab2">
-                            <p>SelectKBest will select the K most explicative features out of the original set.
+                            <p><code>SelectKBest</code> will select the <code>k</code> most explicative features out of the original set.
                                 <code>k</code> is best k number of features that the algorithm returns to us. This
                                 method also takes parameter <code>score_func</code> which defines the statistical method
                                 to use. We've used <code>chi2</code> test as our scoring function. It is available on
-                                sklearn library.
+                                <code>sklearn</code> library.
                             </p>
                             <div class="d-flex align-items-center mb-2">
                                 <h4><a href="https://scikit-learn.org/stable/modules/generated/sklearn.feature_selection.SelectKBest.html"
@@ -433,7 +433,7 @@
             <div class="row feture-tabs" data-aos="fade-up">
                 <div class="col-lg-10">
                     <h3>We focused on building pipelines in order to increase reproducibility and prevent data leakage.
-                        We've trained models on 2 different pipelines as follows <i class="bi bi-caret-down-fill"></i>
+                        We've trained models on <b>2</b> different pipelines as follows <i class="bi bi-caret-down-fill"></i>
                     </h3>
                 </div>
 
@@ -449,8 +449,8 @@
                             <div class="col-md-6 icon-box-block" data-aos="fade-up">
                                 <div class="col-md-12 icon-box-block" data-aos="fade-up" data-aos-delay="100">
                                     <h4>Base Pipeline</h4>
-                                    <p>No resampling was attempted. Training was carried out on 6 different models, with
-                                        hyperparameters fine-tuned via 10-fold cross-validation. Steps are defined as
+                                    <p>No resampling was attempted. Training was carried out on <b>6</b> different models, with
+                                        hyperparameters fine-tuned via <b>10-fold</b> cross-validation. Steps are defined as
                                         below,</p>
                                 </div>
 
@@ -480,9 +480,9 @@
                             <div class="col-md-6 icon-box-block" data-aos="fade-up">
                                 <div class="col-md-12 icon-box-block" data-aos="fade-up" data-aos-delay="100">
                                     <h4>Resampled pipeline</h4>
-                                    <p>Dataset is oversampled with SMOTE first with sample ratio of 0.8. Then Random
-                                        Undersampling is
-                                        applied to the output of the SMOTE transform before returning the final outcome.
+                                    <p>Dataset is oversampled with <b>SMOTE</b> first with sample ratio of <b>0.8</b>. Then <b>Random
+                                        Undersampling</b> is
+                                        applied to the output of the <b>SMOTE</b> transform before returning the final outcome.
                                         Then same defined procedures of first pipeline is repeated.
                                     </p>
                                 </div>
@@ -586,7 +586,7 @@
                         <div class="col-md-12">
                             <div class="info-box">
                                 <i class="bi bi-cloud-arrow-up-fill"></i>
-                                <h3>Model is deployed as SaaS on <code>Heroku</code> Platform.</h3>
+                                <h3>Model is deployed as SaaS on <code>Heroku</code> Platform with Continous Deployment enabled.</h3>
                                 <p>Built on Python <code>v{{ python_version }}</code> using Flask Framework
                                     <code>v{{ flask_version }}</code>
                                 </p>
@@ -667,13 +667,13 @@
                                 rate within all over the world. Thus, it leaves us a huge scope to leverage the
                                 power of predictive modelling.
                                 <br>
-                                &emsp;&emsp;Our project has business scope in both healthcare industry and financial
-                                institutions. In healthcare industry our project can deliver automated health
-                                checkup which may explicitly be used as a paid service or implicitly asses one
-                                patient’s condition before checkup. We believe this will precisely help the industry
-                                to grow fast paced and revolutionize the treatment. As well as the financial
-                                institutions, who provides medical insurance and loans can use our tool to conduct
-                                risk assessment before to lower the risk of defaulting.
+                                &emsp;&emsp;Our project has business scope in both <b>healthcare industry</b> and <b>financial
+                                    institutions</b>. In healthcare industry our project can deliver <b>automated health
+                                        checkup</b> which may explicitly be used as a <b>paid service</b> or implicitly <b>asses
+                                            patient’s condition</b> before checkup. We believe this will precisely help the industry
+                                to grow fast paced and revolutionize the treatment. As well as the <b>financial
+                                    institutions</b>, who provides medical <b>insurance</b> and <b>loans</b> can use our tool to conduct
+                                <b>risk assessment</b> before to <b>lower the risk of defaulting</b>.
                             </p>
                         </div><!-- End Tab 1 Content -->
 
@@ -681,17 +681,17 @@
                             <p>
                                 With a proper implementation in industry, we believe our tool has the potential to,
                             <ol>
-                                <li>Usage as a SaaS type of tool, can be implemented as a single or combining
-                                    with an automated health checkup package.</li>
-                                <li>Periodical usage to quickly asses one patient’s condition by medical
+                                <li>Usage as a <b>SaaS</b> type of tool, can be implemented as a single or combining
+                                    with an <b>automated health checkup package</b>.</li>
+                                <li><b>Periodical usage</b> to quickly asses one patient’s condition by medical
                                     institution, which can alert for any noticeable changes of one’s medical
                                     risk factors, allowing doctors to treat more precisely.</li>
-                                <li>This tool is capable of assessing risk of CHD for the next 10 years.
-                                    Financial institutions can assess the risk based on one’s medical condition
+                                <li>This tool is capable of <b>assessing risk</b> of CHD for the next 10 years.
+                                    Financial institutions can <b>assess the risk </b> based on <b>one’s medical condition</b>
                                     before providing loan or insurances using our tool.</li>
                                 <li>Data is the future. By implementing our tool in public domains, we can
                                     collect random data from people of different racial and demographic
-                                    location. It can be further analyzed leaving an open score for future.</li>
+                                    location. It can be further analyzed leaving an open <b>score for future</b>.</li>
                             </ol>
                             </p>
                         </div><!-- End Tab 2 Content -->
@@ -699,34 +699,34 @@
                         <div class="tab-pane fade show text-justify" id="tab30">
                             <p>
                             <ol>
-                                <li>Imbalanced Dataset: The dataset we’ve worked on is imbalanced in nature. We’ve only
+                                <li><b>Imbalanced Dataset:</b> The dataset we’ve worked on is imbalanced in nature. We’ve only
                                     15% of our data belongs from minority classes. Most common unwanted situation we
                                     could face from such a dataset is that our could score 85% accuracy by always
                                     predicting majority classes. It is certainly not the desired way we want our model
                                     to work.
                                     <br>
                                     In order to solve the problem, we’ve approached for the generation of synthetic
-                                    minority class data points using popular synthetic minority oversampling technique
-                                    or SMOTE where the minority class is up-sampled by choosing a datapoint, randomly
+                                    minority class data points using popular synthetic minority <b>oversampling technique</b>
+                                    or <b>SMOTE</b> where the minority class is up-sampled by choosing a datapoint, randomly
                                     weighting its nearest neighbor, and adding that distortional neighbor to the
                                     original sample.
                                     <br>
-                                    Using the SMOTE approach, we got a significant 55% increase in recall using Random
-                                    Forest model.
+                                    Using the <b>SMOTE approach</b>, we got a significant <b>55% increase</b> in <b>recall</b> using <code>Random
+                                        Forest</code> model.
                                 </li>
-                                <li>Deployment to Heroku: Because it is my first Python project that I've deployed on
-                                    Heroku, I've encountered a few issues during deployment. I’ve efficiently debug my
+                                <li><b>Deployment to Heroku:</b> Because it is my first Python project that I've deployed on
+                                    <b>Heroku</b>, I've encountered a few issues during deployment. I’ve efficiently debug my
                                     app followed by reading documentations and articles and solved these all.
                                     <br>
                                     Some issues I’d like to mention is selection of ports used by Heroku. I was
                                     constantly getting error log of a particular port is being occupied by some other
-                                    process. I solved that by adding a dynamic $PORT variable in Procfile.
+                                    process. I solved that by adding a dynamic <code>$PORT</code> variable in Procfile.
                                     <br>
                                     One other issue that had given me headache is getting permission denied error in
                                     Heroku while my app was running perfectly in local. After a through debug of few
                                     hours, I’ve identified the problem by changing in my flask run script. I’ve learned
                                     how Heroku is using gunicorn server to execute a python script and the importance of
-                                    __name__ variable in Python.
+                                   <code> __name__</code> variable in Python.
                                 </li>
                             </ol>
                             </p>
@@ -738,16 +738,16 @@
                                 product. It will widen the range of possible improvements.
                                 <br>
                             <ol>
-                                <li>As a binomial classification problem with imbalanced dataset, we can assume dataset
-                                    has some bias added within it.
+                                <li>As a binomial classification problem with imbalanced dataset, we can <b>assume</b> dataset
+                                    has some <b>bias</b> added within it.
                                 </li>
-                                <li>Most of the data on the positive cases were artificially synthesized using SMOTE and
+                                <li>Most of the data on the positive cases were <b>artificially synthesized</b> using <b>SMOTE</b> and
                                     as such they may not be a true representation of the actual population
                                 </li>
-                                <li>Our best trained model provides a ~87% of recall. It is surely a limitation on the
+                                <li>Our best trained model provides a <b> ~87%</b> of recall. It is surely a limitation on the
                                     practical use in real-life scenerio.</li>
-                                <li>The interpretation of this result is limited to the risk of myocardial infarction or
-                                    coronary death for the next 10 years only.
+                                <li>The interpretation of this result is <b>limited</b> to the risk of myocardial infarction or
+                                    coronary death for the <b>next 10 years only</b>.
                                 </li>
                             </ol>
                             </p>
@@ -755,16 +755,16 @@
 
                         <div class="tab-pane fade show text-justify" id="tab50">
                             <p>
-                                &emsp;&emsp;For the future scope, the first thing comes in my mind is to improve our
-                                model or try out other approaches which could potentially increase the recall metrics.
-                                We can try some other normalization method like MinMaxScaler etc. Also, we do believe
-                                other ensemble learning methods like XGBoost, CatBoost or AdaBoost can increase
+                                &emsp;&emsp;For the future scope, the first thing comes in my mind is to <b>improve</b> our
+                                model or try out other approaches which could potentially increase the <b>recall metrics</b>.
+                                We can try some other normalization method like <code>MinMaxScaler</code> etc. Also, we do believe
+                                other ensemble learning methods like <code>XGBoost</code>, <code>CatBoost</code> or <code>AdaBoost</code> can increase
                                 performance effectively but with the cost of more computation.
                                 <br>
-                                &emsp;&emsp;Currently, most of the positive cases we’ve worked with are artificially
-                                synthesized data points. So, we should focus on adding more real-life data from positive
-                                cases of CHD. This will generalize our model to use in real-life scenario more
-                                proficiently
+                                &emsp;&emsp;Currently, most of the positive cases we’ve worked with are <b>artificially
+                                    synthesized data points</b>. So, we should focus on adding more <b>real-life data</b> from <b>positive
+                                        cases of CHD</b>. This will generalize our model to use in real-life scenario more
+                                proficiently.
                             </p>
                         </div><!-- End Tab 5 Content -->
                     </div>
@@ -786,7 +786,7 @@
         <div class="container" data-aos="fade-up">
 
             <header class="section-header">
-                <!-- <h2>Team</h2> -->
+                <h2>Deliverables</h2>
                 <p>Project Links</p>
             </header>
 

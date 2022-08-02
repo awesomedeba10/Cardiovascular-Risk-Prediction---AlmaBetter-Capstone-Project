@@ -5,10 +5,29 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
+    <!-- Primary Meta Tags - Being Fancy -->
     <title>Cardiovascular Risk Prediction Analysis</title>
-    <meta content="" name="description">
+    <meta name="title" content="Cardiovascular Risk Prediction Analysis">
+    <meta name="description"
+        content="A case-study-based approach in machine learning to early detect whether the patient has a 10-year risk of future coronary heart disease (CHD) or not.">
 
-    <meta content="" name="keywords">
+    <!-- Open Graph / Facebook - In case someone would like to share it in facebook :D -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ url_for('home.index') }}">
+    <meta property="og:title" content="Cardiovascular Risk Prediction Analysis">
+    <meta property="og:description"
+        content="A case-study-based approach in machine learning to early detect whether the patient has a 10-year risk of future coronary heart disease (CHD) or not.">
+    <meta property="og:image"
+        content="https://user-images.githubusercontent.com/39692126/168034896-40d238ee-cd19-425d-8770-d348df7c7260.png">
+
+    <!-- Twitter - In case someone would like to tweet it :D -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="{{ url_for('home.index') }}">
+    <meta property="twitter:title" content="Cardiovascular Risk Prediction Analysis">
+    <meta property="twitter:description"
+        content="A case-study-based approach in machine learning to early detect whether the patient has a 10-year risk of future coronary heart disease (CHD) or not.">
+    <meta property="twitter:image"
+        content="https://user-images.githubusercontent.com/39692126/168034896-40d238ee-cd19-425d-8770-d348df7c7260.png">
 
     <!-- Favicons -->
     <link href="{{ url_for('static', filename='assets/images/favicon.png') }}" rel="icon">
@@ -47,7 +66,6 @@
         <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
 
             <a href="{{ url_for('home.index') }}" class="logo d-flex align-items-center">
-                <!-- <img src="assets/img/logo.png" alt=""> -->
                 <span>DS Project</span>
             </a>
 
@@ -56,7 +74,8 @@
                     <li><a class="nav-link scrollto active" href="{{ url_for('home.index') }}#home">Home</a></li>
                     <li><a class="nav-link scrollto" href="{{ url_for('home.index') }}#intro">Introduction</a></li>
                     <li><a class="nav-link scrollto" href="{{ url_for('home.index') }}#approaches">Approaches</a></li>
-                    <li><a class="nav-link scrollto" href="{{ url_for('home.index') }}#business">Business Use Cases</a></li>
+                    <li><a class="nav-link scrollto" href="{{ url_for('home.index') }}#business">Business Use Cases</a>
+                    </li>
                     <li><a class="nav-link scrollto" href="{{ url_for('home.index') }}#links">Deliverables</a></li>
                     <li><a class="getstarted scrollto" href="{{ url_for('home.prediction') }}">Calculate Risk</a></li>
                 </ul>
@@ -81,26 +100,36 @@
                         </a>
                         <p>Innovative & Analytically minded who enjoys connecting the dots.</p>
                         <div class="social-links mt-3">
-                            <a href="https://github.com/awesomedeba10" class="twitter" target="_blank"><i class="bi bi-github"></i></a>
-                            <a href="https://www.linkedin.com/in/awesomedeba10/" class="linkedin" target="_blank"><i class="bi bi-linkedin"></i></a>
-                            <a href="https://medium.com/@officialdeba10" class="instagram" target="_blank"><i class="bi bi-medium"></i></a>
-                            <a href="https://stackoverflow.com/users/8551281/iamawesome" class="facebook" target="_blank"><i class="bi bi-stack-overflow"></i></a>
+                            <a href="https://github.com/awesomedeba10" class="twitter" target="_blank"><i
+                                    class="bi bi-github"></i></a>
+                            <a href="https://www.linkedin.com/in/awesomedeba10/" class="linkedin" target="_blank"><i
+                                    class="bi bi-linkedin"></i></a>
+                            <a href="https://medium.com/@officialdeba10" class="instagram" target="_blank"><i
+                                    class="bi bi-medium"></i></a>
+                            <a href="https://stackoverflow.com/users/8551281/iamawesome?tab=profile" class="facebook"
+                                target="_blank"><i class="bi bi-stack-overflow"></i></a>
                         </div>
                     </div>
 
                     <div class="col-lg-2 col-6 footer-links">
-                        
+
                     </div>
 
                     <div class="col-lg-2 col-6 footer-links">
                         <h4>Site Links</h4>
                         <ul>
-                            <li><i class="bi bi-chevron-right"></i> <a href="{{ url_for('home.index') }}#home">Home</a></li>
-                            <li><i class="bi bi-chevron-right"></i> <a href="{{ url_for('home.index') }}#intro">Introduction</a></li>
-                            <li><i class="bi bi-chevron-right"></i> <a href="{{ url_for('home.index') }}#approaches">Approaches</a></li>
-                            <li><i class="bi bi-chevron-right"></i> <a href="{{ url_for('home.index') }}#business">Business Use Cases</a></li>
-                            <li><i class="bi bi-chevron-right"></i> <a href="{{ url_for('home.index') }}#links">Deliverables</a></li>
-                            <li><i class="bi bi-chevron-right"></i> <a href="{{ url_for('home.prediction') }}">Calculate Risk</a></li>
+                            <li><i class="bi bi-chevron-right"></i> <a href="{{ url_for('home.index') }}#home">Home</a>
+                            </li>
+                            <li><i class="bi bi-chevron-right"></i> <a
+                                    href="{{ url_for('home.index') }}#intro">Introduction</a></li>
+                            <li><i class="bi bi-chevron-right"></i> <a
+                                    href="{{ url_for('home.index') }}#approaches">Approaches</a></li>
+                            <li><i class="bi bi-chevron-right"></i> <a
+                                    href="{{ url_for('home.index') }}#business">Business Use Cases</a></li>
+                            <li><i class="bi bi-chevron-right"></i> <a
+                                    href="{{ url_for('home.index') }}#links">Deliverables</a></li>
+                            <li><i class="bi bi-chevron-right"></i> <a href="{{ url_for('home.prediction') }}">Calculate
+                                    Risk</a></li>
                         </ul>
                     </div>
 
@@ -108,7 +137,8 @@
                         <h4>Contact</h4>
                         <p>
                             <strong>Phone:</strong> <a href="tel:+917098908674">+91 70989 08674</a><br>
-                            <strong>Email:</strong> <a href="mailto:officialdeba10@gmail.com">officialdeba10@gmail.com</a><br>
+                            <strong>Email:</strong> <a
+                                href="mailto:officialdeba10@gmail.com">officialdeba10@gmail.com</a><br>
                         </p>
                     </div>
 
@@ -122,7 +152,8 @@
                             Ganguly</a></span></strong>.
             </div>
             <div class="credits">
-                It is a presenatation of personal project, I neither store any of the data you entered nor any kind of caches.
+                It is a presenatation of personal project, I neither store any of the data you entered nor any kind of
+                caches.
             </div>
         </div>
     </footer><!-- End Footer -->
