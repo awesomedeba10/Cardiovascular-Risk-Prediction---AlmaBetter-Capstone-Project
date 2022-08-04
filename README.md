@@ -6,7 +6,11 @@
 [![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)]()
 [![forthebadge](https://forthebadge.com/images/badges/made-with-python.svg)]()
 [![forthebadge](https://forthebadge.com/images/badges/powered-by-responsibility.svg)]()
-[![forthebadge](https://user-images.githubusercontent.com/39692126/182951370-d1f4e0bd-e2b6-4597-8297-d2697d10513d.png)](https://chd-risk-prediction-app.herokuapp.com/)
+
+
+[![](https://img.shields.io/badge/Deployed%20On-Heroku-blueviolet?style=for-the-badge)](https://chd-risk-prediction-app.herokuapp.com/)
+[![](https://img.shields.io/github/repo-size/awesomedeba10/Cardiovascular-Risk-Prediction---AlmaBetter-Capstone-Project?style=for-the-badge)]()
+![GitHub last commit (branch)](https://img.shields.io/github/last-commit/awesomedeba10/Cardiovascular-Risk-Prediction---AlmaBetter-Capstone-Project/deployment?style=for-the-badge)
 
 Link to Heroku: [https://chd-risk-prediction-app.herokuapp.com/](https://chd-risk-prediction-app.herokuapp.com/)
 
